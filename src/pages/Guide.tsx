@@ -15,8 +15,8 @@ export default function Guide() {
   return (
     <>
       <SEO
-        title="TDEE Guide — Mifflin, Katch-McArdle, Activity & Macros"
-        description="How BMR is calculated (Mifflin-St Jeor vs Katch-McArdle), activity multipliers, target calories by goal, and macro ratios for protein, fat, and carbs."
+        titleKey="meta.guide.title"
+        descriptionKey="meta.guide.description"
         path="/guide"
         jsonLd={jsonLd}
       />

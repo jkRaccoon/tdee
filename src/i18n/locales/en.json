@@ -1,0 +1,38 @@
+{
+  "site": {
+    "brandPrefix": "TDEE",
+    "brandSuffix": "& Macro Calculator",
+    "footerCopyright": "© 2026 tdee.bal.pe.kr · Results are estimates, not medical advice. Consult a professional for individual guidance."
+  },
+  "nav": {
+    "calculate": "Calculate",
+    "guide": "Guide",
+    "faq": "FAQ",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact"
+  },
+  "lang": {
+    "toKorean": "한국어",
+    "toEnglish": "English"
+  },
+  "minimalEn": {
+    "title": "Korean-only content",
+    "body": "This page is currently available in Korean only. Use the button below to view the original Korean content.",
+    "linkLabel": "View in Korean →"
+  },
+  "meta": {
+    "home": {
+      "title": "TDEE & Macro Calculator — BMR, Activity, Goal Macros",
+      "description": "Calculate your Basal Metabolic Rate and Total Daily Energy Expenditure using Mifflin-St Jeor or Katch-McArdle formulas, with goal-based macro recommendations."
+    },
+    "guide": {
+      "title": "TDEE Guide — Mifflin, Katch-McArdle, Activity & Macros",
+      "description": "How BMR is calculated (Mifflin-St Jeor vs Katch-McArdle), activity multipliers, target calories by goal, and macro ratios for protein, fat, and carbs."
+    },
+    "faq": {
+      "title": "TDEE FAQ — Formulas, Accuracy, Protein, Pregnancy & Metabolic Conditions",
+      "description": "Which formula is better, TDEE accuracy, high protein rationale, pregnancy use, metabolic conditions — 10 common questions answered."
+    }
+  }
+}

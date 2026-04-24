@@ -1,0 +1,38 @@
+{
+  "site": {
+    "brandPrefix": "TDEE",
+    "brandSuffix": "매크로 계산기",
+    "footerCopyright": "© 2026 tdee.bal.pe.kr · 결과는 추정치이며 의료 조언이 아닙니다. 개인 상황에 맞는 전문 상담을 권장합니다."
+  },
+  "nav": {
+    "calculate": "계산",
+    "guide": "가이드",
+    "faq": "FAQ",
+    "privacy": "개인정보처리방침",
+    "terms": "이용약관",
+    "contact": "문의"
+  },
+  "lang": {
+    "toKorean": "한국어",
+    "toEnglish": "English"
+  },
+  "minimalEn": {
+    "title": "",
+    "body": "",
+    "linkLabel": ""
+  },
+  "meta": {
+    "home": {
+      "title": "TDEE & 매크로 계산기 — BMR, 활동량, 목표별 단백질·탄수·지방",
+      "description": "Mifflin-St Jeor 또는 Katch-McArdle 공식으로 기초대사량과 총 소비칼로리를 계산하고, 감량·유지·증량 목표에 맞는 매크로를 확인합니다."
+    },
+    "guide": {
+      "title": "TDEE 가이드 — 공식과 실전 활용",
+      "description": "BMR 계산 공식(Mifflin vs Katch-McArdle), 활동 배율, 목표별 섭취 칼로리, 단백질·지방·탄수화물 비율."
+    },
+    "faq": {
+      "title": "TDEE FAQ — 공식·정확도·단백질·임신·대사 장애",
+      "description": "어떤 공식이 더 좋은지, TDEE 정확도, 단백질 높은 이유, 임신 중 사용 여부 등 자주 묻는 10개 질문."
+    }
+  }
+}

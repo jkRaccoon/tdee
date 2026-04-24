@@ -73,8 +73,8 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="TDEE & Macro Calculator — BMR, Activity, Goal Macros"
-        description="Calculate your Basal Metabolic Rate and Total Daily Energy Expenditure using Mifflin-St Jeor or Katch-McArdle formulas, with goal-based macro recommendations."
+        titleKey="meta.home.title"
+        descriptionKey="meta.home.description"
         path="/"
         jsonLd={jsonLd}
       />

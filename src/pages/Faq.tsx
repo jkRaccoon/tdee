@@ -27,8 +27,8 @@ export default function Faq() {
   return (
     <>
       <SEO
-        title="TDEE FAQ — Formulas, Accuracy, Pregnancy, Activity Level"
-        description="TDEE and macro calculator FAQs: which formula to use, accuracy, minimum calories, activity level selection, recalculating frequency."
+        titleKey="meta.faq.title"
+        descriptionKey="meta.faq.description"
         path="/faq"
         jsonLd={jsonLd}
       />
