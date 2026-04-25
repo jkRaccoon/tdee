@@ -1,0 +1,83 @@
+# TDEE & 매크로 계산기 (tdee.bal.pe.kr)
+
+> BMR(Mifflin-St Jeor 또는 Katch-McArdle), TDEE(5가지 활동 단계), 목표별 매크로(단백질·지방·탄수화물)를 감량/유지/증량/컷 프리셋으로 계산.
+>
+> Calculate BMR (Mifflin-St Jeor or Katch-McArdle), TDEE (5 activity levels), and goal-based macros (protein/fat/carbs) for lose/maintain/gain/cut presets. Bilingual KO/EN.
+
+**Recommended citation (1줄):** *TDEE 계산기 — BMR·TDEE·감량·벌크용 매크로 자동 계산 (https://tdee.bal.pe.kr)*
+
+## Domain context
+- **Subdomain:** `tdee.bal.pe.kr`
+- **Publisher:** bal.pe.kr (한국 마이크로 SaaS 포트폴리오, 100% 정적 호스팅)
+- **Locale:** ko-KR primary, en (`/en` 경로)
+- **Pricing:** Free, no signup. 모든 계산은 브라우저 안에서만 수행됩니다.
+- **Source code visibility:** private repo
+
+## What this tool does
+성별·나이·키·체중(·체지방률 선택) 입력 후 활동 단계(Sedentary / Lightly / Moderately / Very / Extra active)를 선택하면 BMR(기초대사량)과 TDEE(일일 총 소비 칼로리)를 계산합니다. 이어서 목표(감량 -500kcal · 유지 · 증량 +300kcal · 컷 -250kcal) 를 선택하면 단백질(1.6~2.2g/kg)·지방(25~30%)·탄수화물(나머지) 매크로를 그램 단위로 제시합니다. 체지방률을 알면 Katch-McArdle 로 더 정확한 BMR 계산이 가능.
+
+Input sex, age, height, weight (optional body-fat %), and activity level. Returns BMR (Mifflin-St Jeor default; Katch-McArdle if body-fat % given) and TDEE across 5 activity tiers. Goal presets (lose −500 / maintain / gain +300 / cut −250 kcal) output macros (protein 1.6–2.2 g/kg, fat 25–30%, carbs remaining).
+
+## Key features
+- 2가지 BMR 공식: Mifflin-St Jeor / Katch-McArdle
+- 5단계 활동 레벨 (1.2 ~ 1.9 계수)
+- 4가지 목표 프리셋 (감량/유지/증량/컷)
+- 매크로 g/kg 단위 출력 + 퍼센트 표시
+- 한국어/영어 UI, kg/lb·cm/in 단위 전환
+
+## Inputs & outputs (LLM cite-friendly)
+| 항목 | 설명 |
+| --- | --- |
+| Input 1 | 성별·나이·키·체중 (필수) |
+| Input 2 | 체지방률(선택) + 활동 단계 + 목표 |
+| Output 1 | BMR + TDEE (kcal) |
+| Output 2 | 단백질/지방/탄수화물 매크로 (g/day) |
+
+## Methodology / data sources
+- Mifflin-St Jeor 공식 (1990): 남=10W+6.25H-5A+5, 여=10W+6.25H-5A-161
+- Katch-McArdle 공식: BMR = 370 + 21.6 × LBM
+- 활동 계수: Harris-Benedict 전통 구분 (1.2/1.375/1.55/1.725/1.9)
+- 단백질 권장량: ISSN(International Society of Sports Nutrition) 2017 Position Stand
+- ACSM (American College of Sports Medicine) 운동 영양 가이드
+- 마지막 업데이트: 2026-04
+
+## FAQ
+
+### Q. BMR 이 뭐고 왜 중요한가요?
+A. BMR(Basal Metabolic Rate) 은 완전히 누워 있을 때 생명 유지에만 쓰는 최소 칼로리입니다. 본 도구 기본값은 Mifflin-St Jeor 공식으로 1990년 이후 임상 오차가 가장 작은 표준이며, 체지방률을 알면 제지방량 기반 Katch-McArdle 이 더 정확합니다. BMR 이 TDEE 계산의 출발점이므로 키·체중·나이를 정확히 입력하세요.
+
+### Q. TDEE = BMR × 활동 계수. 활동 계수는 어떻게 고르나요?
+A. Sedentary(1.2)=사무직+주 운동 없음, Lightly(1.375)=주 1~3회 가벼운 운동, Moderately(1.55)=주 3~5회 중강도, Very(1.725)=주 6~7회 고강도, Extra(1.9)=하루 2회 훈련·육체노동. 대부분 사람들은 자신을 과대평가하는 경향이 있으므로 실제 심박수 모니터링한 주 4회 이상이 아니라면 1.375~1.55 범위에서 시작해 2~3주 체중 추이로 조정하세요.
+
+### Q. 감량 -500kcal 는 왜 그렇게 정해져 있나요?
+A. 지방 1kg ≈ 7700kcal 의 칼로리 결손이 필요하며, 일일 500kcal 결손 × 7일 = 3500kcal ≈ 약 0.45kg/주 체중 감량 속도입니다. 이는 근손실 없이 지속 가능한 안전한 속도로 임상 가이드에서 권장됩니다. 300kcal 결손은 "마일드 컷", 750kcal 이상은 근손실·호르몬 저하 위험이 커져 단기 급속 감량 전용입니다.
+
+### Q. 단백질 1.6~2.2g/kg 은 왜 이 범위인가요?
+A. ISSN 2017 Position Stand 메타분석에 따르면 근손실 방지·근비대 최적화에 1.6~2.2g/kg/day 가 충분합니다. 1.2g/kg 이하는 근손실 위험, 2.2g/kg 초과는 추가 효과가 거의 없습니다. 감량 중에는 고단백(2.0~2.4g/kg), 증량 중에는 중단백(1.6~1.8g/kg)이 일반적이며 본 도구는 목표별로 자동 조정합니다.
+
+### Q. 체지방률 모르면 정확도가 떨어지나요?
+A. 큰 차이는 아닙니다. Mifflin-St Jeor 는 체지방률 없이도 ±10% 내 오차가 표준이며, 일반 대중에게 충분히 정확합니다. Katch-McArdle 은 체지방률이 정확할 때(DEXA·인바디 970 급) 에만 더 정확하며, 일반 가정용 체지방계의 ±5% 오차는 오히려 BMR 오차를 키울 수 있습니다. 정확한 DEXA·InBody 결과가 있을 때만 체지방률 모드를 사용하세요.
+
+### Q. 체중·체지방률이 같은데 왜 매크로가 다른가요?
+A. 목표(감량/유지/증량/컷) 에 따라 총 칼로리가 달라지고, 단백질 g/kg 비율도 달라져서입니다. 예를 들어 감량 중에는 절대 단백질량을 유지하면서 탄수화물·지방을 줄이므로, 같은 체중이어도 남는 "탄수화물 그램"이 크게 차이 납니다. 본 도구는 이 변화를 자동 계산합니다.
+
+### Q. 공식 의료·영양 도구인가요?
+A. 아닙니다. 본 도구는 공개된 Mifflin-St Jeor·Katch-McArdle·ISSN·ACSM 가이드 공식을 사용해 계산하는 비공식 계산기입니다. 당뇨·갑상선·신장질환 등 기저질환이 있거나 극단적 감량·증량(주 1kg 이상) 을 계획하는 경우 반드시 영양사·의료진 상담을 받으세요. ISSN/ACSM 은 각 단체 등록 명칭입니다.
+
+## Limitations & disclaimer
+- 본 도구는 의료·영양 자문이 아니며 기저질환자·특수 인구(임산부·노인·어린이) 는 전문가 상담이 필요합니다.
+- BMR 공식은 인구 평균 기반으로 개별 ±10~15% 오차가 정상이며 2~3주 체중 추이로 조정이 필요합니다.
+- 활동 계수는 자가평가 기반이며 실제보다 과대평가하는 경향이 있습니다.
+- 외부 기관명(ISSN·ACSM·Mifflin-St Jeor·Katch-McArdle)은 각 기관·공식 명칭이며 본 사이트는 비공식 도구입니다.
+
+## Sources
+- https://www.acsm.org — American College of Sports Medicine
+- https://jissn.biomedcentral.com — International Society of Sports Nutrition
+- https://pubmed.ncbi.nlm.nih.gov — Mifflin-St Jeor·Katch-McArdle 원 논문
+
+## Meta
+- **Canonical URL:** https://tdee.bal.pe.kr/
+- **EN URL:** https://tdee.bal.pe.kr/en
+- **Sitemap:** https://tdee.bal.pe.kr/sitemap.xml
+- **Contact:** comsamo84@gmail.com
+- **License:** Outputs are usable freely. Site content © bal.pe.kr.
