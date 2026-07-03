@@ -1,4 +1,5 @@
 import SEO from '../components/SEO';
+import { AuthorByline } from '../components/seo-kit';
 
 const QAS = [
   { q: 'Which formula is better — Mifflin, Harris-Benedict, or Katch?', a: 'Mifflin-St Jeor is the current gold standard (ADA 2002) for most people. Harris-Benedict tends to run 5–10% higher and is an older formula. Katch-McArdle uses lean body mass and is the most accurate when body-fat % is known — especially for athletes or very lean/obese individuals. If unsure, start with Mifflin and compare all three using the formula table.' },
@@ -35,8 +36,21 @@ export default function Faq() {
         jsonLd={jsonLd}
       />
 
-      <h1 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">FAQ</h1>
+      <h1 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">TDEE &amp; Macros FAQ</h1>
       <p className="mt-2 text-sm text-slate-600">Common questions about BMR formulas, TDEE, macros, and presets.</p>
+
+      <div className="mt-6">
+        <AuthorByline
+          authorName="Operator (Jikwang Kim)"
+          reviewerName="Cross-checked against Mifflin et al. (1990) and ISSN Position Stand"
+          lastUpdated="2026-05-16"
+          datePublished="2026-04-19"
+          organizationName="bal.pe.kr micro-SaaS"
+          organizationUrl="https://bal.pe.kr/about"
+          mainEntityType="Article"
+          language="en"
+        />
+      </div>
 
       <dl className="mt-8 space-y-6">
         {QAS.map(({ q, a }, i) => (

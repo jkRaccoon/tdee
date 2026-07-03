@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { AuthorByline } from '../components/seo-kit';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -21,10 +22,40 @@ export default function Guide() {
         jsonLd={jsonLd}
       />
 
-      <h1 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">TDEE & Macros Guide</h1>
-      <p className="mt-2 text-sm text-slate-600">Formula breakdown and macro preset guide.</p>
+      <h1 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
+        TDEE &amp; Macros Guide — Mifflin, Harris-Benedict, Katch-McArdle Explained
+      </h1>
+      <p className="mt-2 text-sm text-slate-600">
+        Complete formula breakdown, activity multipliers, goal-based calorie targets, and macro
+        preset guide for body recomposition, cutting, lean bulking, and keto.
+      </p>
+
+      <div className="not-prose mt-6">
+        <AuthorByline
+          authorName="Operator (Jikwang Kim)"
+          reviewerName="Cross-checked against Mifflin et al. (1990) and ISSN Position Stand"
+          lastUpdated="2026-05-16"
+          datePublished="2026-04-19"
+          organizationName="bal.pe.kr micro-SaaS"
+          organizationUrl="https://bal.pe.kr/about"
+          mainEntityType="Article"
+          language="en"
+        />
+      </div>
 
       <article className="prose prose-slate mt-8 max-w-none text-[15px]">
+        <h2>0. Why TDEE matters — the foundation of every nutrition plan</h2>
+        <p>
+          Total Daily Energy Expenditure (TDEE) is the number of calories your body burns in a
+          24-hour period including basal metabolism, the thermic effect of food, non-exercise
+          activity thermogenesis (NEAT), and intentional exercise. Every weight-loss, weight-gain,
+          and body-recomposition plan starts here. Without an accurate TDEE estimate you are
+          flying blind: a 300-kcal-per-day error compounds into a 9-kg-per-year swing in body
+          mass for sedentary adults. This calculator gives you three independently validated
+          formulas so you can sanity-check the result, then translates the calorie target into
+          protein, fat, and carbohydrate grams using five science-backed macro presets.
+        </p>
+
         <h2>1. BMR Formulas — Which to Use?</h2>
         <p>The calculator supports three formulas. Select the one that best fits your data:</p>
         <table>
@@ -138,13 +169,82 @@ lean mass = weight × (1 − body fat % / 100)`}</pre>
           <li>If formulas disagree significantly (&gt;200 kcal), provide body fat % for Katch-McArdle.</li>
         </ul>
 
-        <h2>9. References</h2>
+        <h2>9. Putting it together — a worked example</h2>
+        <p>
+          Take a 32-year-old male, 178 cm, 80 kg, moderate activity (gym 3–5 days/week), goal:
+          lose 0.5 kg/week with muscle retention.
+        </p>
+        <ol>
+          <li>
+            <strong>BMR (Mifflin)</strong>: 10 × 80 + 6.25 × 178 − 5 × 32 + 5 = 800 + 1112.5 − 160 + 5 = <strong>1757.5 kcal</strong>.
+          </li>
+          <li>
+            <strong>TDEE</strong>: 1757.5 × 1.55 = <strong>2724 kcal</strong> maintenance.
+          </li>
+          <li>
+            <strong>Cut target</strong>: 2724 − 500 = <strong>2224 kcal/day</strong>.
+          </li>
+          <li>
+            <strong>Protein</strong>: 2.0 g/kg × 80 kg = 160 g = 640 kcal (29%).
+          </li>
+          <li>
+            <strong>Fat</strong>: 25% of 2224 = 556 kcal = 62 g.
+          </li>
+          <li>
+            <strong>Carbs</strong>: 2224 − 640 − 556 = 1028 kcal = 257 g (46%).
+          </li>
+        </ol>
+        <p>
+          Two weeks later, the scale stalls. Possibilities: NEAT compensation (body unconsciously
+          moves less), water retention from cortisol or training, measurement error, or the
+          original TDEE estimate was 100–200 kcal high. The fix is to re-weigh on the same day
+          of the week for 7-day rolling averages instead of single weigh-ins, and adjust the
+          calorie target by ±100 kcal every 2–3 weeks until rate of loss matches the goal.
+        </p>
+
+        <h2>10. Common mistakes when interpreting TDEE numbers</h2>
         <ul>
-          <li>Mifflin et al., <em>Am J Clin Nutr</em> 1990.</li>
-          <li>Roza & Shizgal, <em>Am J Clin Nutr</em> 1984 (Harris-Benedict revision).</li>
-          <li>Katch-McArdle, <em>Exercise Physiology</em>.</li>
-          <li>ISSN Position Stand: Protein & Exercise (Stokes et al., 2018).</li>
+          <li>
+            <strong>Treating the result as exact</strong>. Even the best formula has a ±10%
+            standard deviation. Use it as a starting point and adjust based on real weight-trend
+            data over 2–4 weeks.
+          </li>
+          <li>
+            <strong>Choosing the activity multiplier optimistically</strong>. The biggest source
+            of error: people log 5 gym sessions a week but spend the rest of the day sedentary.
+            Office worker + 3 gym sessions is usually 1.375 (light), not 1.55 (moderate).
+          </li>
+          <li>
+            <strong>Cutting too aggressively</strong>. A 1000 kcal deficit produces muscle loss,
+            hormonal disruption, and rebound eating for most people. Cap deficits at 25% below
+            TDEE.
+          </li>
+          <li>
+            <strong>Ignoring protein during cuts</strong>. Protein intake of 1.6–2.2 g/kg
+            prevents most of the muscle loss that would otherwise accompany a calorie deficit.
+            This is the single most important macro for body composition.
+          </li>
+          <li>
+            <strong>Forgetting fiber and micronutrients</strong>. Macros are 80% of the picture
+            — the other 20% (fiber 25–35 g/day, vitamins from real food, hydration 30–40 ml/kg)
+            determines whether the diet is sustainable.
+          </li>
         </ul>
+
+        <h2>11. References &amp; further reading</h2>
+        <ul>
+          <li>Mifflin et al., <em>Am J Clin Nutr</em> 1990. A new predictive equation for resting energy expenditure in healthy individuals.</li>
+          <li>Roza &amp; Shizgal, <em>Am J Clin Nutr</em> 1984 (Harris-Benedict revision).</li>
+          <li>Katch-McArdle, <em>Exercise Physiology</em>. Lean-mass-based BMR derivation.</li>
+          <li>ISSN Position Stand: Protein &amp; Exercise (Stokes et al., 2018).</li>
+          <li>Trexler et al., <em>JISSN</em> 2014. Metabolic adaptation to weight loss.</li>
+        </ul>
+
+        <p className="text-sm text-slate-500">
+          This guide is for educational purposes only and is not medical or nutritional advice.
+          Consult a registered dietitian for personalized planning, especially if you have
+          metabolic, kidney, or eating-disorder history.
+        </p>
       </article>
 
       <p className="mt-8 text-sm text-slate-500">
