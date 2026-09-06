@@ -1,0 +1,52 @@
+{
+  "hub": {
+    "id": "life",
+    "emoji": "🍚",
+    "ko": "생활·건강",
+    "en": "Life & Health"
+  },
+  "tools": [
+    {
+      "slug": "rcpscale",
+      "url": "https://bal.pe.kr/tools/rcpscale",
+      "emoji": "🥘",
+      "ko": "레시피 인분 스케일러",
+      "en": "Recipe Serving Scaler"
+    },
+    {
+      "slug": "senjob",
+      "url": "https://bal.pe.kr/tools/senjob",
+      "emoji": "👴",
+      "ko": "노인일자리 사업 자격 매칭 가이드",
+      "en": "Senior Job Program Eligibility Matcher"
+    },
+    {
+      "slug": "sleepcycle",
+      "url": "https://bal.pe.kr/tools/sleepcycle",
+      "emoji": "🌙",
+      "ko": "수면 주기 계산기",
+      "en": "Sleep Cycle Calculator"
+    },
+    {
+      "slug": "sleepmood",
+      "url": "https://bal.pe.kr/tools/sleepmood",
+      "emoji": "🌙",
+      "ko": "수면일지 + ISI·PSQI 자가검사",
+      "en": "Sleep Diary + ISI·PSQI Screening"
+    },
+    {
+      "slug": "solarroi",
+      "url": "https://bal.pe.kr/tools/solarroi",
+      "emoji": "☀️",
+      "ko": "태양광 자가발전 회수기간 계산기",
+      "en": "Solar ROI Calculator"
+    },
+    {
+      "slug": "airfryer",
+      "url": "https://bal.pe.kr/tools/airfryer",
+      "emoji": "🍟",
+      "ko": "에어프라이어·오븐 조리 온도·시간 변환기",
+      "en": "Air Fryer / Oven Time & Temp Converter"
+    }
+  ]
+}
