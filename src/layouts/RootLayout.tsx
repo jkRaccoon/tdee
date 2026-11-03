@@ -2,7 +2,6 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Analytics from '../components/Analytics';
 import LanguageSwitcher from '../components/LanguageSwitcher';
-import CoupangBanner from '../components/CoupangBanner';
 import CoupangProducts from '../components/CoupangProducts';
 import RelatedTools from '../components/RelatedTools';
 import { detectLangFromPath, withLangPrefix } from '../i18n';
@@ -53,7 +52,6 @@ export default function RootLayout() {
       <main className="mx-auto max-w-4xl px-6 py-8">
         <Outlet />
         <CoupangProducts />
-        <CoupangBanner position="bottom" className="mx-auto max-w-4xl px-6" />
         <RelatedTools />
       </main>
 

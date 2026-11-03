@@ -1,28 +1,59 @@
 {
-  "_readme": "url 에 쿠팡 파트너스 '링크 생성'으로 만든 https://link.coupang.com/a/... 단축링크를 넣으면 그 항목만 노출됩니다. url 이 비어 있는 항목은 렌더링되지 않습니다.",
+  "_readme": "microsaas-infra/scripts/coupang-links 가 생성한 파일. 직접 고치지 말고 targets.json 수정 → linkgen.aside.js → apply.mjs 로 다시 만든다.",
+  "generatedAt": "2026-11-03T11:05:25.642Z",
+  "heading": {
+    "ko": "칼로리 계획을 지키는 도구",
+    "en": "Tools to stick to your calories"
+  },
   "items": [
     {
-      "url": "",
-      "ko": "주방 저울 (식단 계량)",
-      "en": "Kitchen scale",
+      "url": "https://link.coupang.com/a/inqXzxtpSK",
+      "ko": "닭가슴살",
+      "en": "Chicken breast",
       "note": {
-        "ko": "칼로리 계산의 전제는 계량이다"
-      }
+        "ko": "단백질 목표 채우기"
+      },
+      "title": "열두닭 오븐으로만 조리한 닭가슴살 오리지널 훈제맛, 100g, 100개",
+      "image": "https://thumbnail.coupangcdn.com/thumbnails/remote/300x300ex/image/vendor_inventory/1656/fc1b0537a4b6fe7903a2802e21fb2f8574e1b7b7a576d51ba44ccb8c9969.png",
+      "rating": 4.5,
+      "reviews": 6077,
+      "badges": [
+        "FREE_SHIPPING",
+        "ROCKET_CASH_REWARD"
+      ]
     },
     {
-      "url": "",
+      "url": "https://link.coupang.com/a/inqXG6mjsa",
       "ko": "단백질 보충제",
-      "en": "Protein powder"
+      "en": "Protein powder",
+      "note": {
+        "ko": "부족한 단백질 보충"
+      },
+      "title": "뉴욕웨이 몬스터 단백질보충제, 2kg, 1개",
+      "image": "https://thumbnail.coupangcdn.com/thumbnails/remote/300x300ex/image/vendor_inventory/d6ad/2d11ca846201a8c77a70b019f301f30acf9448539491fc6da074ff854573.png",
+      "rating": 4.5,
+      "reviews": 2557,
+      "badges": [
+        "FREE_SHIPPING",
+        "ROCKET_CASH_REWARD"
+      ]
     },
     {
-      "url": "",
-      "ko": "닭가슴살 세트",
-      "en": "Chicken breast pack"
-    },
-    {
-      "url": "",
-      "ko": "식단 도시락 용기",
-      "en": "Meal prep containers"
+      "url": "https://link.coupang.com/a/inqXNtjuEK",
+      "ko": "식단 용기",
+      "en": "Meal prep containers",
+      "note": {
+        "ko": "주간 식단 미리 나누기"
+      },
+      "title": "사각 스텐 4구 밀폐 찬통 휴대용 캠핑 과일 도시락통 직장인 다이어트 식단 도시락통 720ml, 1개, 푸른 색",
+      "image": "https://thumbnail.coupangcdn.com/thumbnails/remote/300x300ex/image/vendor_inventory/0ae6/8ca3d7a995eddd971b41dd6004755719d31bde1452610c9669ee952dcd0e.png",
+      "rating": 4.5,
+      "reviews": 186,
+      "badges": [
+        "ROCKET_CASH_REWARD",
+        "ROCKET_MERCHANT",
+        "TOMORROW"
+      ]
     }
   ]
 }

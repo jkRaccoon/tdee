@@ -20,6 +20,7 @@ import {
   type Sex,
   type TdeeInput,
 } from '../lib/tdee';
+import CoupangProducts from '../components/CoupangProducts';
 
 const STORAGE = 'tdee-input';
 
@@ -450,6 +451,9 @@ export default function Home() {
               ))}
             </ul>
           </section>
+
+          {/* 관련 상품 (결과 흐름 바로 뒤) */}
+          <CoupangProducts placement="inline" className="mt-6" />
 
           {/* Cross-links */}
           <section className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2">
