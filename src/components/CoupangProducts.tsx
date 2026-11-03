@@ -35,31 +35,33 @@ interface Props {
 
 const SLUG = 'tdee';
 
-const DISCLOSURE_KO = '쿠팡 파트너스 활동의 일환으로 일정액의 수수료를 제공받습니다.';
+// 공정위 추천·보증 심사지침(2024-12-01 개정): 대가성 문구는 첫 부분에, 본문과 구별되게(크기·색) 표시한다.
+// 쿠팡 최종 승인 심사도 링크와 문구가 한 화면에 보이는지 본다 — 그래서 제목 바로 아래에 둔다.
+const DISCLOSURE_KO = '이 영역은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.';
 const DISCLOSURE_EN = 'As a Coupang Partners affiliate, this site earns a commission from qualifying purchases.';
 
 const TONES = {
   light: {
     section: 'border-slate-200 bg-white shadow-sm',
     heading: 'text-slate-900',
-    pill: 'border-slate-200 text-slate-400',
+    pill: 'border-amber-300 text-amber-700',
     card: 'border-slate-200 hover:border-slate-300 hover:shadow-md',
     label: 'text-slate-900',
     note: 'text-slate-500',
     meta: 'text-slate-500',
     rocket: 'text-sky-600',
-    disclosure: 'text-slate-400',
+    disclosure: 'text-amber-700',
   },
   dark: {
     section: 'border-slate-800 bg-slate-900/70',
     heading: 'text-white',
-    pill: 'border-slate-700 text-slate-500',
+    pill: 'border-amber-400/50 text-amber-300',
     card: 'border-slate-700 bg-slate-800/40 hover:border-slate-500',
     label: 'text-slate-100',
     note: 'text-slate-400',
     meta: 'text-slate-400',
     rocket: 'text-sky-400',
-    disclosure: 'text-slate-500',
+    disclosure: 'text-amber-300',
   },
 };
 
@@ -141,6 +143,8 @@ export default function CoupangProducts({ placement = 'layout', tone = 'light', 
         </span>
       </div>
 
+      <p className={`mt-1 text-xs font-medium leading-snug ${c.disclosure}`}>{ko ? DISCLOSURE_KO : DISCLOSURE_EN}</p>
+
       {/* 모바일: 다음 카드가 살짝 보이는 가로 스와이프 / sm 이상: 4열 고정 — 상품이 적어도 카드가 커져 광고처럼 튀지 않게 */}
       <ul className="-mx-4 mt-3 flex snap-x snap-mandatory scroll-px-4 gap-3 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-4 sm:overflow-visible sm:px-0 sm:pb-0 [&::-webkit-scrollbar]:hidden">
         {items.map((it, i) => {
@@ -188,7 +192,6 @@ export default function CoupangProducts({ placement = 'layout', tone = 'light', 
         })}
       </ul>
 
-      <p className={`mt-3 text-[11px] leading-snug ${c.disclosure}`}>{ko ? DISCLOSURE_KO : DISCLOSURE_EN}</p>
     </section>
   );
 }
